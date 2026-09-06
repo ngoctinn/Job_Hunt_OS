@@ -2,314 +2,236 @@
 
 ## 1. Ý tưởng
 
-**Job Hunt OS** là một ứng dụng mobile giúp sinh viên và người mới đi làm quản lý quá trình tìm việc của mình.
+**Job Hunt OS** là một ứng dụng mobile giúp người đang tìm việc không bị mất dấu giữa nhiều cơ hội, nhiều phiên bản CV, nhiều nguồn tuyển dụng và nhiều bước tuyển dụng khác nhau.
 
-Ứng dụng không phải nơi đăng tin tuyển dụng và cũng không tìm việc thay người dùng.
+Ứng dụng giúp người dùng:
 
-Thay vào đó, Job Hunt OS giúp người dùng tập hợp các cơ hội việc làm đang quan tâm vào một nơi, ghi lại những nơi đã ứng tuyển, biết từng đơn đang tiến triển thế nào, nhớ việc cần làm tiếp theo và nhìn lại toàn bộ quá trình tìm việc của mình.
+* lưu nhanh một cơ hội việc làm;
+* nhớ mình đã ứng tuyển ở đâu;
+* giữ lại thông tin quan trọng của job;
+* biết CV nào đã gửi;
+* ghi lại những sự kiện quan trọng;
+* biết việc cần làm tiếp theo;
+* tìm lại toàn bộ context khi recruiter liên hệ;
+* nhìn lại quá trình tìm việc của mình.
 
-Có thể hiểu đơn giản sản phẩm như:
+Job Hunt OS **không phải job board** và không tìm việc thay người dùng.
 
-> **Một nơi để quản lý hành trình tìm việc cá nhân.**
+Có thể hiểu sản phẩm đơn giản là:
 
-Thay vì thông tin nằm rải rác trong email, LinkedIn, Facebook, website tuyển dụng, ghi chú, spreadsheet và trí nhớ, người dùng có một nơi duy nhất để theo dõi.
+> **Một lớp ghi nhớ và quản lý bước tiếp theo cho quá trình tìm việc.**
+
+Product principle:
+
+> **Less CRM. More memory.**
 
 ---
 
 # 2. Vấn đề muốn giải quyết
 
-Khi bắt đầu tìm internship hoặc công việc đầu tiên, một người có thể tìm thấy cơ hội từ rất nhiều nguồn khác nhau:
+Người tìm việc thường phát hiện cơ hội từ nhiều nguồn:
 
-- LinkedIn;
-    
-- Facebook;
-    
-- website công ty;
-    
-- TopCV;
-    
-- ITviec;
-    
-- Glints;
-    
-- các nhóm tuyển dụng;
-    
-- bạn bè giới thiệu;
-    
-- recruiter chủ động liên hệ.
-    
+* LinkedIn;
+* Facebook;
+* TopCV;
+* ITviec;
+* Glints;
+* website công ty;
+* group tuyển dụng;
+* referral;
+* recruiter chủ động liên hệ.
 
-Sau một thời gian, người dùng có thể đã xem hoặc ứng tuyển hàng chục vị trí.
+Khi chỉ có một vài application, người dùng có thể nhớ được.
 
-Thông tin bắt đầu bị phân tán.
+Nhưng khi số lượng tăng lên, thông tin bắt đầu phân tán.
 
 Ví dụ:
 
 ```text
-Job A → lưu trong Chrome
+Job A
+→ lưu trong browser
 
-Job B → thấy trên Facebook
+Job B
+→ thấy trên Facebook
 
-Job C → đã gửi CV nhưng không nhớ ngày nào
+Job C
+→ đã gửi CV nhưng không nhớ gửi bản nào
 
-Job D → recruiter gửi email
+Job D
+→ recruiter gọi nhưng không nhớ JD
 
-Job E → sắp phỏng vấn nhưng bài đăng gốc đã bị xóa
+Job E
+→ có interview nhưng bài đăng đã bị xóa
 
-Job F → không nhớ mình đã gửi phiên bản CV nào
+Job F
+→ cần follow-up nhưng quên ngày
 ```
 
-Khi đó người tìm việc thường gặp những câu hỏi như:
+Người dùng bắt đầu phải trả lời những câu hỏi như:
 
 > Mình đã apply công ty này chưa?
 
-> Job này lúc trước yêu cầu những gì?
+> Mình apply ngày nào?
 
-> Công ty nào đang chờ phản hồi?
+> Job này lúc trước yêu cầu gì?
 
-> Công ty nào mình nên follow-up?
+> Recruiter đang gọi về vị trí nào?
 
-> Tuần này mình có interview nào?
+> Mình đã gửi CV nào?
 
-> Mình đã gửi CV nào cho công ty này?
+> Application này đang chờ gì?
 
-> Mình thường bị dừng ở vòng nào?
+> Hôm nay mình cần làm gì?
 
-> Mình đang apply rất nhiều nhưng thực sự có tiến triển không?
+> Công ty này đã phản hồi chưa?
 
-Hiện nay người dùng có thể tự giải quyết bằng:
+> Mình đã interview mấy vòng?
 
-- Google Sheets;
-    
-- Excel;
-    
-- Notion;
-    
-- Notes;
-    
-- Calendar;
-    
-- bookmark;
-    
-- screenshot;
-    
-- email;
-    
-- hoặc đơn giản là cố nhớ.
-    
+> Kết quả cuối cùng là gì?
 
-Những cách này có thể đủ với một số người.
+Hiện tại những thông tin này thường nằm rải rác trong:
 
-Vì vậy, vấn đề Job Hunt OS cần giải quyết **không chỉ là tạo thêm một danh sách việc làm**.
-
-Sản phẩm chỉ có giá trị nếu giúp việc quản lý quá trình tìm việc **nhẹ hơn và hữu ích hơn cách người dùng đang làm hiện tại**.
+* email;
+* Google Sheets;
+* Notes;
+* Notion;
+* Calendar;
+* browser bookmark;
+* screenshots;
+* chat;
+* trí nhớ.
 
 ---
 
-# 3. Người dùng mục tiêu
+# 3. Đối thủ thực tế
+
+Đối thủ lớn nhất của Job Hunt OS không nhất thiết là một ứng dụng tuyển dụng khác.
+
+Đối thủ thực tế là:
+
+```text
+Google Sheets
++
+Email
++
+Calendar
++
+Notes
++
+"Để lúc recruiter gọi rồi tính"
+```
+
+Google Sheets và Notion đã đủ khả năng để người dùng tự tạo application tracker.
+
+Các sản phẩm như Huntr, Teal và Simplify cũng đã có nhiều chức năng:
+
+* job tracking;
+* saving JD;
+* CV management;
+* autofill;
+* reminders;
+* analytics;
+* AI.
+
+Vì vậy Job Hunt OS **không tạo đủ giá trị nếu chỉ là một tracker có giao diện đẹp hơn**.
+
+Sản phẩm cần tạo khác biệt bằng:
+
+1. ít thao tác hơn;
+2. lấy lại context nhanh hơn;
+3. không yêu cầu user duy trì một CRM phức tạp;
+4. ưu tiên đúng những application đang có tiến triển.
+
+---
+
+# 4. Người dùng mục tiêu
 
 ## Nhóm người dùng chính
 
-Sinh viên năm cuối và người mới tốt nghiệp tại Việt Nam đang tìm:
+Sinh viên năm cuối và fresher tại Việt Nam đang tìm:
 
-- internship;
-    
-- fresher job;
-    
-- junior job.
-    
+* internship;
+* fresher position;
+* junior position.
 
-## Nhóm nên dùng để kiểm chứng sản phẩm đầu tiên
+## Initial target
 
-Sinh viên năm cuối và fresher ngành công nghệ tại Việt Nam.
+Nhóm phù hợp nhất để kiểm chứng sản phẩm ban đầu:
 
-Lý do chọn nhóm này trước:
-
-- thường phải ứng tuyển nhiều nơi;
-    
-- dễ tiếp cận để phỏng vấn và thử nghiệm sản phẩm;
-    
-- quy trình tuyển dụng thường có nhiều bước;
-    
-- CV, project, technical test và interview tạo ra nhiều thông tin cần theo dõi.
-    
-
-Đây là **phạm vi ban đầu để kiểm chứng**, không có nghĩa sản phẩm sau này chỉ dành cho ngành công nghệ.
-
----
-
-# 4. Bối cảnh sử dụng
-
-Người dùng sử dụng Job Hunt OS trong suốt quá trình tìm việc.
-
-Một hành trình điển hình có thể như sau.
-
-## Khi tìm thấy một công việc
-
-Người dùng thấy:
-
-> Backend Intern — Company A
-
-trên LinkedIn.
-
-Họ lưu cơ hội đó vào Job Hunt OS.
-
-Ứng dụng giữ lại các thông tin cần thiết như:
-
-```text
-Company A
-
-Backend Intern
-
-Nguồn:
-LinkedIn
-
-Link:
-...
-
-Job description:
-...
-
-Deadline:
-...
-```
-
-Người dùng chưa nhất thiết phải ứng tuyển ngay.
-
----
-
-## Khi ứng tuyển
-
-Sau khi gửi CV, người dùng đánh dấu:
-
-```text
-Đã ứng tuyển
-07/09/2026
-```
-
-Nếu cần, họ có thể ghi:
-
-```text
-CV đã dùng:
-Backend CV v3
-```
-
----
-
-## Khi recruiter phản hồi
-
-Ví dụ recruiter gửi email mời screening.
-
-Người dùng cập nhật:
-
-```text
-Recruiter đã liên hệ
-```
-
-và có thể tạo việc tiếp theo:
-
-```text
-Chuẩn bị HR interview
-
-Deadline:
-10/09
-```
-
----
-
-## Khi có phỏng vấn
-
-Một đơn ứng tuyển có thể trải qua nhiều vòng.
+> **Sinh viên/fresher đang theo đuổi nhiều cơ hội việc làm song song qua nhiều nguồn và bắt đầu không còn nhớ rõ từng application.**
 
 Ví dụ:
 
 ```text
-07/09
-Applied
-
-10/09
-HR Interview
-
-14/09
-Technical Interview
-
-18/09
-Final Interview
+20 applications
++
+nhiều job boards
++
+nhiều CV versions
++
+recruiter gọi bất ngờ
++
+nhiều interview đang diễn ra
 ```
 
-Ứng dụng giữ toàn bộ lịch sử thay vì chỉ hiển thị một trạng thái cuối cùng.
+Đây là target phù hợp hơn một định nghĩa rộng như:
+
+> “Tất cả sinh viên đang tìm việc.”
 
 ---
 
-## Khi quá trình kết thúc
+# 5. Người không phải target chính
+
+Một số người có thể không cần Job Hunt OS.
 
 Ví dụ:
 
-```text
-Rejected
-```
+### Người chỉ apply rất ít vị trí
 
-hoặc:
+Nếu user chỉ có:
 
 ```text
-Offer received
+3–5 applications
 ```
 
-Nếu nhận offer, người dùng vẫn có thể:
+và nhớ được toàn bộ bằng email hoặc calendar, tracker riêng có thể không tạo đủ giá trị.
+
+### Người không muốn track
+
+Một số người chủ động chọn:
 
 ```text
-Accept
-Decline
+Apply
+↓
+Forget
+↓
+Chỉ quan tâm khi employer phản hồi
 ```
 
-Nhận offer không có nghĩa là người dùng đã nhận việc.
+Nếu Job Hunt OS yêu cầu họ cập nhật mọi application thường xuyên, sản phẩm có thể làm quá trình tìm việc mệt hơn.
 
 ---
 
-## Khi nhìn lại quá trình tìm việc
-
-Sau một thời gian, người dùng có thể thấy:
-
-```text
-25 applications
-
-11 responses
-
-6 applications reached interview
-
-2 offers
-```
-
-Mục đích là giúp người dùng hiểu **điều gì đã thực sự xảy ra**.
-
-Ứng dụng không tự kết luận:
-
-> “CV của bạn kém.”
-
-chỉ vì số interview thấp.
-
----
-
-# 5. Giá trị cốt lõi
+# 6. Giá trị cốt lõi
 
 Job Hunt OS cần giúp người dùng trả lời nhanh ba câu hỏi.
 
-## 1. Tôi đang ở đâu?
+## 1. Tôi đang ứng tuyển những đâu?
 
 Ví dụ:
 
 ```text
-Company A
-Technical interview
+ABC
+Backend Intern
+Applied
 
-Company B
-Waiting for response
+XYZ
+Mobile Intern
+Technical Interview
 
-Company C
-Offer received
-
-Company D
-Need to follow up tomorrow
+DEF
+Data Intern
+Waiting
 ```
 
 ---
@@ -319,304 +241,432 @@ Need to follow up tomorrow
 Ví dụ:
 
 ```text
-Tomorrow
-Follow up Company B
+Today
 
-Friday
-Prepare technical interview
+Prepare Technical Interview
+ABC
 
-Sunday
-Submit coding assignment
+Submit Coding Test
+XYZ
+
+Reply to Recruiter
+DEF
 ```
 
 ---
 
-## 3. Điều gì đang xảy ra trong quá trình tìm việc của tôi?
+## 3. Khi cần, tôi có nhớ đúng context không?
+
+Ví dụ recruiter gọi:
+
+> “Anh gọi từ ABC về vị trí Backend Intern em apply tuần trước.”
+
+User mở Job Hunt OS và ngay lập tức thấy:
+
+```text
+ABC
+
+Backend Intern
+
+Applied:
+18 Aug
+
+Source:
+LinkedIn
+
+CV used:
+backend-v3
+
+JD:
+Python
+FastAPI
+PostgreSQL
+
+Last activity:
+Applied
+
+Next action:
+None
+```
+
+Use case này được gọi là:
+
+## **Instant Context Recall**
+
+Đây là một trong những giá trị quan trọng nhất của sản phẩm.
+
+---
+
+# 7. Value proposition
+
+Phiên bản ngắn:
+
+> **Lưu một lần. Khi cần, nhớ đúng job, đúng CV và đúng bước tiếp theo.**
+
+Phiên bản đầy đủ:
+
+> Job Hunt OS giúp người đang apply nhiều nơi lưu lại context quan trọng của từng cơ hội và từng lần ứng tuyển, sau đó nhanh chóng biết mình đang ở đâu và cần làm gì tiếp theo mà không phải duy trì một spreadsheet hoặc CRM phức tạp.
+
+---
+
+# 8. Product philosophy
+
+## Less CRM, more memory
+
+Job Hunt OS không hướng tới việc biến người tìm việc thành người quản lý dữ liệu.
+
+Người dùng không nên phải:
+
+```text
+điền 15 fields
+↓
+chọn 12 statuses
+↓
+update sau mỗi email nhỏ
+↓
+chăm tracker mỗi ngày
+```
+
+Sản phẩm nên ưu tiên:
+
+```text
+Capture once
+↓
+Log meaningful events only
+↓
+Always show next action
+↓
+Retrieve context when needed
+```
+
+---
+
+# 9. Progressive Tracking
+
+Không phải mọi application cần được quản lý chi tiết như nhau.
+
+Đây là một nguyên tắc quan trọng của sản phẩm.
+
+## Giai đoạn chưa có phản hồi
+
+Tracking nên cực nhẹ.
+
+Ví dụ chỉ cần:
+
+```text
+Company
+Role
+Source
+JD
+Applied date
+CV used
+```
+
+Không cần ép user thêm interview notes, contacts hoặc các field chưa liên quan.
+
+---
+
+## Khi employer bắt đầu phản hồi
+
+Application trở nên quan trọng hơn.
+
+Lúc này app có thể mở thêm:
+
+```text
+Timeline
+Interview
+Assessment
+Notes
+Next Actions
+Offer
+```
+
+Có thể hiểu:
+
+```text
+Silent application
+→ lightweight tracking
+
+Active application
+→ deeper tracking
+```
+
+Mục tiêu là giảm tracking fatigue.
+
+---
+
+# 10. Core product loop
+
+```text
+Tìm thấy một job
+        ↓
+Lưu nhanh vào app
+        ↓
+Quyết định apply
+        ↓
+Mark Applied
+        ↓
+Nếu employer im lặng
+→ gần như không cần làm gì
+        ↓
+Employer phản hồi
+        ↓
+Log meaningful event
+        ↓
+Create Next Action
+        ↓
+Interview / Assessment / Offer
+        ↓
+Close Application
+        ↓
+History được giữ lại
+```
+
+App không cần ép user tương tác mỗi ngày.
+
+---
+
+# 11. Các khái niệm nghiệp vụ chính
+
+## Opportunity
+
+Một cơ hội việc làm user đang quan tâm.
 
 Ví dụ:
 
 ```text
-30 applications
-
-12 received responses
-
-7 reached interview
-
-1 reached offer
+ABC
+Backend Intern
 ```
 
-Sản phẩm giúp người dùng nhìn thấy dữ liệu.
-
-Không giả vờ biết chắc nguyên nhân phía sau dữ liệu đó.
+User có thể lưu Opportunity mà chưa apply.
 
 ---
 
-# 6. Cách sản phẩm hoạt động
+## Application
 
-Luồng chính của sản phẩm là:
-
-```text
-Tìm thấy một cơ hội việc làm
-        ↓
-Lưu vào Job Hunt OS
-        ↓
-Quyết định ứng tuyển
-        ↓
-Ghi lại việc đã ứng tuyển
-        ↓
-Ghi lại những sự kiện quan trọng
-        ↓
-Biết việc cần làm tiếp theo
-        ↓
-Nhận kết quả
-        ↓
-Đóng lần ứng tuyển
-        ↓
-Nhìn lại lịch sử
-        ↓
-Tiếp tục cơ hội tiếp theo
-```
-
-Điểm quan trọng là người dùng **không cần cập nhật mọi chi tiết nhỏ**.
-
-Chỉ những sự kiện có ý nghĩa với họ mới cần được ghi lại.
-
----
-
-# 7. Điều đã xác định
-
-## 7.1. Đây không phải job board
-
-Job Hunt OS không cần sở hữu danh sách việc làm riêng.
-
-Người dùng vẫn có thể tìm việc ở:
-
-- LinkedIn;
-    
-- Facebook;
-    
-- TopCV;
-    
-- ITviec;
-    
-- Glints;
-    
-- website công ty;
-    
-- hoặc bất kỳ nguồn nào khác.
-    
-
-Job Hunt OS bắt đầu tạo giá trị **sau khi người dùng tìm thấy một cơ hội**.
-
----
-
-## 7.2. Một công việc được lưu chưa có nghĩa là đã ứng tuyển
+Một lần người dùng thực sự theo đuổi một Opportunity.
 
 Ví dụ:
 
 ```text
 Backend Intern
-Company A
+ABC
+
+Attempt #1
+March
+Rejected
+
+Attempt #2
+September
+Applied
 ```
 
-có thể chỉ đang ở trạng thái:
-
-```text
-Đang quan tâm
-```
-
-Người dùng có thể:
-
-- apply sau;
-    
-- hoặc quyết định không apply.
-    
+Hai lần này phải có history riêng.
 
 ---
 
-## 7.3. Một người có thể ứng tuyển nhiều vị trí tại cùng một công ty
+## Event
+
+Một việc **đã xảy ra**.
 
 Ví dụ:
 
 ```text
-Company A
+Applied
+Recruiter contacted
+Interview completed
+Assessment submitted
+Offer received
+Rejected
+```
+
+---
+
+## Next Action
+
+Một việc **chưa xảy ra** mà user cần làm.
+
+Ví dụ:
+
+```text
+Follow up recruiter
+
+Prepare interview
+
+Complete assessment
+
+Reply to offer
+```
+
+`Event` và `Next Action` không phải một thứ.
+
+---
+
+## JD Snapshot
+
+Nội dung Job Description được giữ lại để user có thể xem sau.
+
+JD snapshot có giá trị vì:
+
+* bài đăng có thể hết hạn;
+* link có thể bị xóa;
+* user cần xem lại trước interview;
+* recruiter có thể gọi khi user không nhớ role.
+
+---
+
+## CV Version
+
+Phiên bản CV đã được dùng cho application.
+
+Ví dụ:
+
+```text
+Backend-v3
+```
+
+Không bắt buộc user phải upload file trong MVP.
+
+Có thể chỉ cần lưu tên/version.
+
+---
+
+# 12. Các quy tắc nghiệp vụ đã xác định
+
+## Một job được lưu chưa có nghĩa là đã apply
+
+```text
+Saved
+```
+
+khác:
+
+```text
+Applied
+```
+
+---
+
+## Một user có thể apply nhiều role trong cùng một công ty
+
+Ví dụ:
+
+```text
+ABC
 
 Backend Intern
 Data Intern
 Mobile Intern
 ```
 
-Mỗi lần ứng tuyển cần được theo dõi riêng.
+Mỗi application được theo dõi riêng.
 
 ---
 
-## 7.4. Một người có thể ứng tuyển lại
+## User có thể apply lại
 
 Ví dụ:
 
 ```text
 Backend Intern
-Company A
+ABC
 
-Lần 1:
-Rejected — March
+Attempt #1
+Rejected
 
-Lần 2:
-Applied again — September
-```
-
-Lần ứng tuyển mới không được xóa hoặc ghi đè lịch sử cũ.
-
----
-
-## 7.5. Không phải quá trình nào cũng bắt đầu bằng việc user chủ động apply
-
-Có thể xảy ra:
-
-```text
-Recruiter liên hệ
-↓
-Candidate trao đổi
-↓
-Interview
-```
-
-Vì vậy sản phẩm cần hỗ trợ cả trường hợp recruiter chủ động tìm đến người dùng.
-
----
-
-## 7.6. Interview có thể có nhiều vòng
-
-Không giả định tất cả công ty đều có quy trình giống:
-
-```text
+Attempt #2
+6 months later
 Applied
+```
+
+Không ghi đè history cũ.
+
+---
+
+## Không phải mọi process bắt đầu bằng Apply
+
+Có thể:
+
+```text
+Recruiter contacted
 ↓
 Interview
 ↓
 Offer
 ```
 
-Thực tế có thể là:
+Ứng dụng phải support recruiter inbound.
+
+---
+
+## Interview có thể có nhiều vòng
+
+Ví dụ:
 
 ```text
-Applied
-↓
 HR Screen
-↓
+
 Coding Test
-↓
+
 Technical Interview
-↓
+
 Team Interview
-↓
+
 Final Interview
-↓
-Offer
 ```
 
-hoặc hoàn toàn khác.
-
-Vì vậy các vòng interview được ghi vào lịch sử thay vì ép mọi công ty vào một quy trình cố định.
+Không ép tất cả employer theo cùng một pipeline.
 
 ---
 
-## 7.7. Việc chưa xảy ra và việc đã xảy ra là hai thứ khác nhau
+## Interview là event lặp lại được
 
-Ví dụ:
-
-```text
-Technical interview
-Friday 10:00
-```
-
-là một việc sắp xảy ra.
-
-Sau khi interview xong mới trở thành:
+Không nên chỉ có một trạng thái duy nhất:
 
 ```text
-Technical interview completed
+Interview
 ```
 
-Điều này giúp lịch sử không bị sai.
+mà mất toàn bộ lịch sử.
 
 ---
 
-## 7.8. Một application có thể có nhiều việc cần làm tiếp theo
-
-Không chỉ có follow-up.
-
-Ví dụ:
-
-```text
-Apply before deadline
-
-Complete coding assignment
-
-Prepare interview
-
-Send follow-up
-
-Reply to offer
-```
-
-Ứng dụng cần quản lý các việc này như **Next Actions**.
-
----
-
-## 7.9. Không phản hồi không đồng nghĩa với bị từ chối
+## Không phản hồi không đồng nghĩa Rejected
 
 Ví dụ:
 
 ```text
 Applied:
-01/09
+01 Sep
 
 Today:
-20/09
+20 Sep
 
 No response
 ```
 
-Job Hunt OS có thể nói:
+App có thể nói:
 
-> Đã 19 ngày chưa có hoạt động mới.
+> 19 ngày chưa có hoạt động mới.
 
-Nhưng không được tự đổi thành:
+Nhưng không được tự kết luận:
 
 > Rejected.
 
-Chỉ người dùng hoặc thông tin rõ ràng từ employer mới xác nhận outcome.
+---
+
+## Archived không phải kết quả tuyển dụng
+
+Archive chỉ là cách user dọn giao diện.
+
+Không được dùng Archive để tính rejection.
 
 ---
 
-## 7.10. Các lý do kết thúc cần được phân biệt
+## Offer received không đồng nghĩa Accepted
 
-Ví dụ:
-
-```text
-Employer rejected
-
-User withdrew
-
-Position closed
-
-No response — user decided to close
-
-Offer accepted
-
-Offer declined
-
-Offer rescinded
-```
-
-Những trường hợp này không nên bị gộp chung thành `Rejected`.
-
----
-
-## 7.11. Nhận offer không đồng nghĩa với nhận việc
-
-Một offer có thể đang:
+Offer có thể:
 
 ```text
 Pending
@@ -627,176 +677,131 @@ Rescinded
 
 ---
 
-## 7.12. User là nguồn xác nhận cuối cùng
+## User là nguồn xác nhận cuối cùng
 
-Trong MVP, ứng dụng không tự đoán trạng thái từ email, LinkedIn hoặc dữ liệu bên ngoài.
-
-User xác nhận điều đã xảy ra.
+Trong MVP, app không tự thay đổi application state dựa trên email hoặc suy đoán.
 
 ---
 
-## 7.13. Ứng dụng ưu tiên fact trước interpretation
+# 13. Instant Context Recall
 
-Ví dụ app có thể nói:
+Đây là một use case quan trọng của MVP.
 
-> 3 trong 25 application của bạn đã đi tới interview.
+Scenario:
 
-App không được biến điều đó thành fact:
+```text
+Recruiter gọi bất ngờ
+```
 
-> CV của bạn có vấn đề.
+User search:
 
-Có rất nhiều nguyên nhân khác có thể dẫn đến cùng kết quả.
+```text
+ABC
+```
 
----
-
-# 8. Những thông tin chính sản phẩm cần giữ
-
-## Cơ hội việc làm
-
-Ví dụ:
+Ứng dụng phải giúp user nhanh chóng thấy:
 
 ```text
 Company
 Role
-Job description
+Applied date
+Source
+JD
+CV used
+Last activity
+Next action
+Notes
+```
+
+Mục tiêu:
+
+> Người dùng không phải tìm lại email, LinkedIn, Google Drive hoặc spreadsheet trong lúc đang nói chuyện với recruiter.
+
+---
+
+# 14. MVP Scope
+
+## P0 — bắt buộc
+
+### Quick Add Opportunity
+
+User có thể tạo một cơ hội với tối thiểu:
+
+```text
+Company
+Role
+```
+
+Có thể thêm:
+
+```text
 Source
 URL
+JD
 Deadline
 Notes
 ```
 
-Không phải trường nào cũng bắt buộc.
-
 ---
 
-## Lần ứng tuyển
+## Fast Capture
 
-Ví dụ:
+Ứng dụng nên hỗ trợ các cách nhập nhẹ nhất có thể:
 
 ```text
-Ngày apply
-Cách apply
-CV đã gửi
-Trạng thái hiện tại
-Kết quả cuối cùng
+Manual
+Paste URL
+Paste JD
+Share vào app
 ```
 
+Không bắt buộc auto crawl website.
+
 ---
 
-## Lịch sử
+## Mark Applied
 
-Ví dụ:
+User có thể nhanh chóng ghi:
 
 ```text
-07/09
+Applied
+```
+
+và application date.
+
+---
+
+## JD Snapshot
+
+User có thể lưu nội dung JD để xem lại sau.
+
+---
+
+## CV Version
+
+User có thể ghi optional:
+
+```text
+CV used:
+backend-v3
+```
+
+Không bắt buộc upload CV.
+
+---
+
+## Application Timeline
+
+User có thể ghi meaningful events:
+
+```text
 Applied
 
-10/09
 Recruiter contacted
 
-12/09
-HR interview
-
-17/09
-Technical interview
-
-21/09
-Offer received
-```
-
----
-
-## Việc cần làm
-
-Ví dụ:
-
-```text
-Prepare technical interview
-
-Due:
-17/09
-```
-
----
-
-## Ghi chú
-
-Ví dụ:
-
-```text
-Recruiter hỏi về Docker.
-
-Technical interview hỏi về database indexing.
-
-Cần xem lại Redis.
-```
-
----
-
-## CV hoặc tài liệu đã sử dụng
-
-Không nhất thiết phải upload file trong MVP.
-
-Có thể chỉ cần lưu:
-
-```text
-CV:
-Backend CV v3
-```
-
-để user nhớ chính xác phiên bản đã gửi.
-
----
-
-# 9. Phạm vi MVP
-
-Phiên bản đầu tiên chỉ cần chứng minh rằng người dùng thật sự muốn duy trì workflow này.
-
-## MVP cần có
-
-### Lưu cơ hội việc làm
-
-User nhập:
-
-```text
-Company
-Role
-```
-
-và có thể thêm:
-
-```text
-URL
-Job description
-Source
-Deadline
-Notes
-```
-
----
-
-### Ghi nhận một lần ứng tuyển
-
-User có thể nói:
-
-```text
-Tôi đã apply job này.
-```
-
----
-
-### Timeline
-
-User có thể ghi các sự kiện quan trọng như:
-
-```text
-Applied
-
-Recruiter responded
+Assessment
 
 Interview
-
-Assessment
 
 Offer
 
@@ -805,133 +810,170 @@ Rejected
 
 ---
 
-### Next Actions
+## Next Action
 
-User có thể tạo việc cần làm:
+User có thể tạo:
 
 ```text
-Follow up
-
 Prepare interview
-
-Submit assignment
-
+Follow up
+Complete assessment
+Reply to recruiter
 Reply to offer
 ```
 
-và đặt deadline.
+và deadline.
 
 ---
 
-### Ghi kết quả cuối cùng
+## Fast Search
 
-User có thể đóng application với lý do phù hợp.
-
----
-
-### Danh sách tổng quan
-
-User có thể nhanh chóng thấy:
+User phải có thể tìm application nhanh theo:
 
 ```text
-Đang active
-
-Đang chờ
-
-Sắp interview
-
-Có việc cần làm
-
-Đã kết thúc
+Company
+Role
 ```
+
+để hỗ trợ Instant Context Recall.
 
 ---
 
-### Thống kê cơ bản
+## Explicit Closure
+
+Khi process kết thúc, user ghi rõ lý do.
 
 Ví dụ:
 
 ```text
-Applications:
-25
+Employer rejected
 
-Responses:
-11
+User withdrew
 
-Reached interview:
-6
+Position closed
 
-Offers:
-2
+No response — user chose to close
+
+Offer accepted
+
+Offer declined
+
+Offer rescinded
+
+Unknown
 ```
 
-Chỉ mô tả dữ liệu.
-
 ---
 
-# 10. Những thứ chưa làm trong MVP
+# 15. Home screen cần trả lời gì?
 
-Không xây:
+Home không nên chỉ là Kanban.
 
-- job marketplace;
-    
-- hệ thống đăng tuyển cho doanh nghiệp;
-    
-- social network;
-    
-- community;
-    
-- mentor marketplace;
-    
-- course platform;
-    
-- auto apply hàng loạt;
-    
-- tự gửi CV;
-    
-- tự nhắn recruiter;
-    
-- tự đọc toàn bộ email;
-    
-- tự thay đổi application status;
-    
-- tự crawl mọi website tuyển dụng;
-    
-- AI chấm CV theo điểm;
-    
-- “ATS score”;
-    
-- AI khẳng định nguyên nhân user bị reject;
-    
-- AI interview platform hoàn chỉnh;
-    
-- company review platform;
-    
-- salary database.
-    
+Câu hỏi chính:
 
-Những phần này chỉ được xem xét nếu core product đã chứng minh có giá trị.
+> **Hôm nay có gì cần tôi chú ý?**
 
----
-
-# 11. AI
-
-AI **không phải điều kiện để MVP tồn tại**.
-
-Nếu sau này thêm AI, hướng ưu tiên là giúp user hiểu thông tin rõ hơn.
-
-Ví dụ từ một JD:
+Ví dụ:
 
 ```text
-Job requires:
+TODAY
 
+Technical interview
+ABC
+14:00
+
+Submit assessment
+XYZ
+Due 18:00
+
+Follow up recruiter
+DEF
+Overdue
+```
+
+Sau đó mới đến:
+
+```text
+Active Applications
+```
+
+và các overview khác.
+
+---
+
+# 16. Analytics
+
+Analytics không phải trọng tâm P0.
+
+Khi có đủ dữ liệu, app có thể cho user thấy:
+
+```text
+Applications
+Responses
+Reached Interview
+Offers
+```
+
+Ví dụ:
+
+```text
+25 applications
+
+11 responses
+
+6 reached interview
+
+2 offers
+```
+
+Đây chỉ là **dữ liệu mô tả**.
+
+Không được kết luận:
+
+> CV của bạn yếu.
+
+Từ:
+
+```text
+25 applications
+3 interviews
+```
+
+có thể có nhiều nguyên nhân:
+
+* CV;
+* target role;
+* seniority;
+* timing;
+* competition;
+* hiring freeze;
+* market conditions;
+* application quality.
+
+Ứng dụng không biết chắc nguyên nhân.
+
+---
+
+# 17. AI
+
+AI không phải requirement của MVP.
+
+Nếu sau này AI được thêm vào, AI có thể hỗ trợ:
+
+## JD extraction
+
+Ví dụ:
+
+```text
 Python
 PostgreSQL
 Docker
 AWS
 ```
 
-và hồ sơ user:
+---
+
+## Requirement → Evidence mapping
 
 ```text
 Python
@@ -941,411 +983,457 @@ PostgreSQL
 → Project B
 
 Docker
-→ chưa có evidence
+→ No evidence
 
 AWS
 → Project C
 ```
 
-Sản phẩm có thể giúp user thấy:
+Mục tiêu là cho user biết:
 
-> Requirement nào đã có bằng chứng?
+> Requirement nào có evidence?
 
 > Requirement nào chưa có?
 
-Không ưu tiên kiểu:
+Không ưu tiên:
 
 ```text
-Your CV match score: 82%
+CV Match Score: 82%
 ```
 
-nếu hệ thống không giải thích rõ 82% đó đến từ đâu.
-
-AI cũng không được tự biến suy đoán thành sự thật.
+nếu không giải thích được vì sao.
 
 ---
 
-# 12. Constraint
+# 18. Những thứ không làm trong MVP
+
+Không build:
+
+* job marketplace;
+* employer ATS;
+* company review;
+* salary database;
+* social network;
+* community;
+* mentor marketplace;
+* course platform;
+* resume builder;
+* cover letter generator;
+* ATS score;
+* generic AI chatbot;
+* automatic rejection diagnosis;
+* auto-apply;
+* automatic recruiter messages;
+* full recruiter CRM;
+* complex custom workflows;
+* complex analytics dashboard;
+* automatic Gmail reading;
+* automatic status inference;
+* background scraping mọi job board.
+
+---
+
+# 19. Competitive constraints
+
+## Google Sheets
+
+Nếu Job Hunt OS mất nhiều thao tác ngang hoặc hơn Google Sheets, user không có lý do rõ để switch.
+
+---
+
+## Notion
+
+Job Hunt OS không nên yêu cầu user tự thiết kế database hoặc workflow.
+
+---
+
+## Huntr
+
+Job Hunt OS không nên trở thành:
+
+> Huntr nhưng ít feature hơn.
+
+Không cạnh tranh bằng feature count.
+
+---
+
+## Teal
+
+Không ưu tiên resume optimization, ATS scores hoặc keyword matching trong MVP.
+
+---
+
+## Simplify
+
+Simplify cho thấy value lớn của việc giảm manual input.
+
+Job Hunt OS nên học nguyên tắc:
+
+> **Một update user không phải nhập là update tốt nhất.**
+
+Nhưng chưa cần xây browser autofill.
+
+---
+
+# 20. Constraints
 
 ## Mobile app
 
-Sản phẩm được định hướng là mobile app.
+Sản phẩm được định hướng mobile-first.
 
-Mobile đặc biệt phù hợp với các hành động như:
+Mobile phù hợp với:
 
 ```text
-Thấy job
-↓
-Share / copy vào app
+See job
+→ Share
 
-Nhận email
-↓
-Update trạng thái
+Recruiter calls
+→ Search context
 
-Có interview
-↓
-Nhận reminder
+Interview tomorrow
+→ Reminder
+
+Receive response
+→ Quick update
 ```
+
+Mobile không phải moat một mình.
 
 ---
 
-## MVP phải đủ nhỏ để một developer xây
+## Một developer có thể xây MVP
 
-Không thiết kế sản phẩm dựa trên giả định rằng có một team lớn.
+Mỗi feature phải trả lời:
 
-Mỗi feature mới phải trả lời được:
+> Nó có cần thiết để kiểm chứng core product value không?
 
-> Nó có cần thiết để kiểm chứng core value không?
+Nếu không, defer.
 
 ---
 
 ## Không phụ thuộc network effect
 
-Một người dùng duy nhất vẫn phải nhận được giá trị từ sản phẩm.
-
-Sản phẩm không được cần:
-
-```text
-nhiều recruiter
-nhiều employer
-nhiều user khác
-```
-
-mới hoạt động.
+Một user duy nhất vẫn phải nhận được full core value.
 
 ---
 
-## Không phụ thuộc vào việc crawl job board
+## Không phụ thuộc scraping
+
+MVP không yêu cầu:
+
+```text
+Paste LinkedIn URL
+→ backend tự crawl toàn bộ JD
+```
 
 User có thể:
 
-- nhập thủ công;
-    
-- paste link;
-    
-- paste JD;
-    
-- share nội dung vào app nếu nguồn cho phép.
-    
-
-Không coi việc tự động scrape LinkedIn, Glints hoặc các nền tảng khác là requirement mặc định.
+* paste;
+* share;
+* nhập thủ công.
 
 ---
 
-## Privacy là constraint bắt buộc
+## Privacy
 
-Sản phẩm có thể giữ những thông tin cá nhân như:
+Sản phẩm có thể xử lý:
 
-- CV;
-    
-- portfolio;
-    
-- application history;
-    
-- notes;
-    
-- email;
-    
-- thông tin recruiter.
-    
+* CV;
+* JD;
+* application history;
+* notes;
+* recruiter information;
+* email/phone nếu user lưu.
 
-Vì vậy sản phẩm phải hạn chế thu thập dữ liệu không cần thiết.
+Chỉ thu thập dữ liệu cần thiết.
 
-Nếu user tạo account, phải có cách để user yêu cầu xóa account và dữ liệu theo các yêu cầu pháp lý/platform áp dụng.
-
----
-
-## Không bắt user nhập quá nhiều
-
-Đây là một constraint quan trọng của sản phẩm.
-
-Nếu mỗi job bắt user nhập:
+Không upload CV nếu chỉ cần lưu:
 
 ```text
-15 fields
-```
-
-hoặc mỗi email phải mở app update một lần, người dùng có khả năng bỏ tracker.
-
-Sản phẩm phải ưu tiên:
-
-```text
-Lưu nhanh
-
-Chỉ cập nhật sự kiện quan trọng
-
-Luôn cho biết next action
+Backend-v3
 ```
 
 ---
 
-# 13. Điều sản phẩm không hứa hẹn
+## Tracking friction
 
-Job Hunt OS không hứa:
+Đây là constraint sản phẩm quan trọng nhất.
 
-> Dùng app sẽ chắc chắn có việc.
+Nếu user thấy việc cập nhật app giống:
 
-Không hứa:
+> thêm một công việc hành chính,
 
-> Dùng app sẽ tăng offer rate X%.
-
-Không hứa:
-
-> AI biết chính xác tại sao bạn bị reject.
-
-Không hứa:
-
-> Job nào app đánh giá cao thì bạn sẽ được tuyển.
-
-Sản phẩm giúp user **quản lý và hiểu quá trình tìm việc tốt hơn**.
-
-Quyết định tuyển dụng cuối cùng vẫn phụ thuộc vào employer và nhiều yếu tố bên ngoài.
+core loop sẽ thất bại.
 
 ---
 
-# 14. Dấu hiệu sản phẩm đang tạo giá trị
+# 21. Success criteria
 
-Không nên đánh giá thành công chỉ bằng:
+Không đánh giá product chỉ bằng:
 
 ```text
-Số lượt tải app
+Downloads
+Accounts created
+```
+
+Các signal quan trọng hơn:
+
+## Capture
+
+User lưu job thật vào app.
+
+---
+
+## Continued usage
+
+User tiếp tục cập nhật nhiều application.
+
+---
+
+## Meaningful return
+
+User quay lại khi:
+
+* recruiter phản hồi;
+* có interview;
+* có assessment;
+* cần chuẩn bị;
+* cần follow-up.
+
+---
+
+## Context retrieval
+
+User sử dụng app để tìm lại:
+
+```text
+JD
+CV
+Notes
+History
+```
+
+---
+
+## Next Action usage
+
+User tạo và xử lý Next Actions.
+
+---
+
+## Reduced maintenance
+
+User cảm thấy tracking nhẹ hơn workflow cũ.
+
+Đây là một success criterion quan trọng.
+
+---
+
+# 22. Dấu hiệu product hypothesis sai
+
+Cần xem xét lại dự án nếu user:
+
+* tạo vài application rồi bỏ;
+* không quay lại khi employer phản hồi;
+* thấy việc update quá phiền;
+* Google Sheets vẫn nhanh hơn;
+* không cần JD snapshot;
+* không cần context recall;
+* không dùng Next Action;
+* chỉ apply vài job và nhớ được;
+* chỉ quan tâm CV optimization;
+* chỉ quan tâm interview preparation;
+* chỉ cần job discovery.
+
+Nếu vậy không nên mặc định giải pháp là:
+
+```text
+Add AI
+Add gamification
+Add analytics
+Add features
+```
+
+Có thể core problem chưa đủ lớn.
+
+---
+
+# 23. Giả thuyết sản phẩm
+
+## Primary hypothesis
+
+> Fresher đang apply nhiều cơ hội song song qua nhiều nguồn bắt đầu mất context giữa job descriptions, CV versions, recruiter conversations và lịch tuyển dụng.
+
+## Solution hypothesis
+
+> Nếu việc lưu và cập nhật đủ nhẹ, một mobile app tập trung vào context recall và next action có thể hữu ích hơn việc quản lý bằng email, spreadsheet và Notes rời rạc.
+
+## Differentiation hypothesis
+
+> Job Hunt OS có thể tạo lý do để switch nếu việc capture và lấy lại context nhanh hơn đáng kể so với Sheets/Notion, đồng thời nhẹ hơn các dedicated job-search platforms như Huntr, Teal và Simplify.
+
+Các hypothesis trên chưa phải fact.
+
+---
+
+# 24. Thông tin chưa chắc chắn
+
+## User có switch khỏi Sheets không?
+
+Chưa xác định.
+
+---
+
+## Instant Context Recall có đủ mạnh để trở thành differentiator không?
+
+Research cho thấy problem tồn tại.
+
+Chưa có behavioral evidence rằng user sẽ cài app chỉ vì feature này.
+
+---
+
+## Next Action có phải return trigger mạnh nhất không?
+
+Chưa xác định.
+
+Các return triggers có thể là:
+
+```text
+Recruiter reply
+
+Interview preparation
+
+Follow-up
+
+Job hunt session
+```
+
+---
+
+## Mobile có tạo advantage đủ lớn không?
+
+Chưa xác định.
+
+Huntr cũng đã có native mobile app.
+
+---
+
+## CV version có đủ quan trọng với target Việt Nam không?
+
+Có evidence community nhưng chưa biết mức sử dụng trong target cụ thể.
+
+---
+
+## Analytics có tạo retention không?
+
+Chưa xác định.
+
+---
+
+## AI có cần thiết không?
+
+Chưa xác định.
+
+Không phải MVP requirement.
+
+---
+
+# 25. Prototype cần kiểm chứng điều gì?
+
+Prototype đầu tiên không cần chứng minh toàn bộ sản phẩm.
+
+Chỉ cần kiểm chứng ba điều.
+
+## Test A — Capture
+
+> User có lưu một job thật nhanh hơn workflow hiện tại không?
+
+Flow:
+
+```text
+See job
+↓
+Share / Add
+↓
+Saved
+```
+
+---
+
+## Test B — Recall
+
+Giả lập:
+
+> Recruiter gọi về một application user đã lưu.
+
+User phải tìm lại được nhanh:
+
+```text
+Company
+Role
+JD
+CV
+Applied date
+Latest activity
+```
+
+---
+
+## Test C — Return
+
+Giả lập hoặc quan sát:
+
+> Employer vừa phản hồi.
+
+User có thấy update Job Hunt OS dễ hơn:
+
+```text
+không track
 ```
 
 hoặc:
 
 ```text
-Số account được tạo
+update Sheet/Notion
 ```
 
-Tín hiệu quan trọng hơn là hành vi thật.
+hay không?
 
-Ví dụ:
+---
 
-### User lưu application thật
+# 26. Điều kiện để tiếp tục đầu tư
 
-Không phải chỉ dùng dữ liệu demo.
+Nên tiếp tục build sâu nếu prototype cho thấy:
 
-### User quay lại khi có sự kiện mới
+1. user thực sự lưu opportunity thật;
+2. user quay lại khi có meaningful event;
+3. context recall tạo value rõ;
+4. Next Action được sử dụng;
+5. maintenance effort thấp;
+6. user bắt đầu dùng app thay vì workflow cũ cho ít nhất một phần quá trình tìm việc.
 
-Ví dụ recruiter phản hồi hoặc có interview.
+Nếu không đạt các tín hiệu này, cần revisiting core value trước khi xây thêm.
 
-### User cập nhật nhiều application
+---
 
-Không chỉ tạo một application rồi bỏ app.
+# 27. Định nghĩa ngắn gọn cuối cùng
 
-### User sử dụng Next Actions
+Nếu phải giải thích Job Hunt OS cho một người chưa biết dự án:
 
-Ví dụ:
+> **Job Hunt OS là một ứng dụng mobile dành cho người đang tìm việc ở nhiều nơi cùng lúc. Ứng dụng giúp họ lưu lại job, nhớ mình đã gửi CV nào, giữ lại JD, theo dõi những việc quan trọng đã xảy ra và biết việc cần làm tiếp theo. Khi recruiter bất ngờ liên hệ, người dùng có thể nhanh chóng tìm lại toàn bộ context thay vì tìm trong email, browser, Notes hoặc spreadsheet.**
+
+Sản phẩm không tìm việc thay người dùng.
+
+Sản phẩm không hứa giúp họ chắc chắn được tuyển.
+
+Sản phẩm giải quyết ba câu hỏi:
 
 ```text
-Follow up tomorrow
-```
-
-và quay lại xử lý.
-
-### User dùng history để tìm lại context
-
-Ví dụ trước interview họ mở lại:
-
-```text
-JD
-CV đã gửi
-Notes
-Timeline
-```
-
-### User tiếp tục sử dụng app trong thời gian họ đang tìm việc
-
-Đây là tín hiệu quan trọng nhất.
-
----
-
-# 15. Dấu hiệu giả thuyết sản phẩm có thể sai
-
-Cần xem xét lại ý tưởng nếu user:
-
-- nhập vài job lúc đầu rồi không quay lại;
-    
-- thấy việc update application quá phiền;
-    
-- thích spreadsheet hiện tại hơn;
-    
-- chỉ apply 2–3 job nên không cần tracker;
-    
-- không quan tâm history;
-    
-- không sử dụng next actions;
-    
-- chỉ thực sự cần hỗ trợ CV;
-    
-- chỉ thực sự cần interview preparation;
-    
-- chỉ thực sự cần tìm job.
-    
-
-Nếu điều này xảy ra, không nên mặc định giải pháp là:
-
-> thêm AI;
-
-> thêm nhiều feature;
-
-> thêm gamification.
-
-Có thể vấn đề ban đầu đơn giản là chưa đủ lớn.
-
----
-
-# 16. Thông tin chưa chắc chắn
-
-Những điều dưới đây chưa được xem là fact.
-
-## Người dùng có thật sự duy trì tracker không?
-
-Đây là câu hỏi quan trọng nhất.
-
-Research cho thấy tracking fatigue là một failure mode thực tế.
-
-Cần kiểm chứng với user Việt Nam.
-
----
-
-## IT có phải nhóm đầu tiên tốt nhất không?
-
-Hiện tại IT được chọn vì thuận lợi cho validation.
-
-Chưa có bằng chứng đủ để nói đây là vertical tốt nhất của toàn thị trường.
-
----
-
-## Mobile có tốt hơn web đủ nhiều không?
-
-Mobile có lợi thế về:
-
-- share;
-    
-- reminder;
-    
-- update nhanh.
-    
-
-Nhưng cần prototype để biết user có thực sự thích workflow mobile hơn spreadsheet/web không.
-
----
-
-## Funnel analytics có tạo giá trị lâu dài không?
-
-Có thể user thích xem analytics một vài lần nhưng sau đó không còn quan tâm.
-
-Cần đo bằng hành vi thực tế.
-
----
-
-## CV version có cần nằm trong MVP đầu tiên không?
-
-Concept này có giá trị rõ về mặt nghiệp vụ.
-
-Nhưng chưa biết target users có customize CV đủ thường xuyên để nó trở thành feature bắt buộc ngay phiên bản đầu.
-
----
-
-## AI có thực sự cần thiết không?
-
-Chưa xác định.
-
-AI chỉ nên được thêm nếu nó giải quyết một pain point đã được kiểm chứng.
-
----
-
-# 17. Giả thuyết sản phẩm hiện tại
-
-Giả thuyết cốt lõi là:
-
-> Sinh viên và fresher đang tìm việc qua nhiều nguồn gặp khó khăn trong việc giữ lại context, trạng thái và việc cần làm tiếp theo của nhiều application.
-
-Và:
-
-> Nếu việc lưu và cập nhật đủ nhẹ, một ứng dụng mobile tập trung vào timeline và next action có thể hữu ích hơn việc quản lý bằng email, Notes và spreadsheet rời rạc.
-
-Điều cần kiểm chứng không phải:
-
-> User nói app có hay không.
-
-Mà là:
-
-> User có thực sự sử dụng nó trong quá trình tìm việc thật hay không.
-
----
-
-# 18. Cách nên kiểm chứng dự án trước khi xây lớn
-
-Chọn khoảng 8–12 sinh viên năm cuối hoặc fresher đang thực sự tìm việc.
-
-Yêu cầu mỗi người lấy ra khoảng 5 application gần nhất.
-
-Không hỏi:
-
-> “Bạn có thích ý tưởng này không?”
-
-Thay vào đó hỏi họ cho xem quá trình thật:
-
-> Job này bạn tìm thấy ở đâu?
-
-> Bạn apply khi nào?
-
-> Bạn có còn JD không?
-
-> Bạn nhớ CV nào đã gửi không?
-
-> Công ty đã phản hồi gì?
-
-> Bạn đang chờ gì?
-
-> Bạn có việc gì cần làm tiếp không?
-
-> Bạn lưu những thông tin này ở đâu?
-
-> Có từng quên mình đã apply chưa?
-
-> Có từng ngừng cập nhật spreadsheet không? Vì sao?
-
-Sau đó cho họ sử dụng một prototype rất nhỏ:
-
-```text
-Add opportunity
-↓
-Mark applied
-↓
-Log event
-↓
-Add next action
-↓
-Close application
-```
-
-Điều quan trọng nhất cần quan sát là:
-
-> Khi có sự kiện tuyển dụng thật xảy ra, họ có tự nhớ tới Job Hunt OS và quay lại cập nhật hay không?
-
-Nếu có, dự án có tín hiệu tốt để tiếp tục.
-
-Nếu không, cần tìm lại xem pain point thực sự nằm ở đâu trước khi xây thêm.
-
----
-
-# 19. Định nghĩa ngắn gọn cuối cùng
-
-Nếu cần giải thích Job Hunt OS cho một người chưa từng nghe về sản phẩm:
-
-> **Job Hunt OS là ứng dụng giúp người đang tìm việc quản lý tất cả những nơi họ quan tâm hoặc đã ứng tuyển. Người dùng có thể lưu job, ghi lại khi đã apply, theo dõi các vòng tuyển dụng, nhớ việc cần làm tiếp theo, lưu lại CV hoặc ghi chú liên quan và cuối cùng nhìn lại quá trình tìm việc của mình. Sản phẩm không tìm việc thay người dùng và cũng không quyết định họ có phù hợp với công việc hay không; nó giúp quá trình tìm việc bớt rời rạc và dễ quản lý hơn.**
-
-Nếu phải mô tả bằng ba câu hỏi:
-
-```text
-Tôi đang ứng tuyển những đâu?
+Tôi đã apply những đâu?
 
 Tôi cần làm gì tiếp theo?
 
-Quá trình tìm việc của tôi đang diễn ra như thế nào?
+Khi cần, tôi có nhớ đúng context không?
 ```
 
-Nếu Job Hunt OS trả lời tốt được ba câu hỏi đó mà không bắt người dùng phải “chăm sóc” một hệ thống phức tạp, sản phẩm đang đi đúng hướng.
+Nếu Job Hunt OS trả lời ba câu hỏi đó nhanh hơn và ít tốn công hơn các cách hiện tại, sản phẩm đang tạo ra giá trị.
