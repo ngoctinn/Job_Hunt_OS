@@ -1,0 +1,32 @@
+# >>> coding-friend managed
+docs/plans/
+docs/memory/
+docs/research/
+docs/sessions/
+docs/reviews/
+docs/context/
+docs/warm/
+docs/later/
+docs/learn/
+.coding-friend/
+# <<< coding-friend managed
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+.turbo/
+.next/
+.output/
+.wxt/
+coverage/
+
+# Cache & Logs
+*.tsbuildinfo
+*.log
+.DS_Store
+
+# Secrets & Local environments
+.env*.local
